@@ -2,6 +2,19 @@ var player;
 var menu;
 var world;
 var battle;
+var keys = [];
+var overworld = [
+  [".",".",".",".",",",".",".",".",".","."],
+  [".",";",";",",",",",",",",",",",",",","],
+  [".",":",";",".",",",".",".",".",".","."],
+  [".",".",".",",",".",".",".",".",".",","],
+  [".",".",".",".",",",".",".",".",".","."],
+  [".",".",".",".",",",".",".",".",".","."],
+  [".",".",".",".",".",".",".",".",".","."],
+  [".",".",".",".",".",".",".",".",".","."],
+  [".",".",".",".",".",".",".",".",".","."],
+  [".",".",".",".",".",".",".",".",".","."]
+];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -24,6 +37,35 @@ function draw() {
   
   if(menu === "battle") {
     battle.run();
+  }
+}
+
+function keyPressed() {
+  keys[keyCode] = true;
+}
+
+function keyReleased() {
+  //keys[keyCode] = false;
+}
+
+function keyTyped() {
+  if(menu === "world") {
+    if(key === 'w') {
+      player.y --;
+    }
+    if(key === 's') {
+      player.y ++;
+    }
+    if(key === 'a') {
+      player.x --;
+    }
+    if(key === 'd') {
+      player.x ++;
+    }
+  }
+  
+  if(menu === "battle") {
+    
   }
 }
 
