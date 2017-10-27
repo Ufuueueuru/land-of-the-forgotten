@@ -21,7 +21,7 @@ function setup() {
   
   player = new Player(0, 0, 20, 1, 0, new Items(0, 0), 0, 1);
   menu = "world";
-  world = new World();
+  world = new World(overworld);
   battle = new Battle();
 }
 
