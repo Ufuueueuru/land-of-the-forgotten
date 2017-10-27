@@ -26,6 +26,7 @@ function setup() {
 }
 
 function draw() {
+  background(255, 255, 255);
   world.run();//debug purposes
   if(menu === "world") {
     world.run();
