@@ -11,19 +11,4 @@ function Player(x, y, life, attack, armor, items, exp, level) {
     textSize(20);
     text("@", this.x * 20, this.y * 20 + 20);
   }
-  
-  this.move = function(dir) {
-    if(dir === 0) {
-      this.x ++;
-    }
-    if(dir === 1) {
-      this.y --;
-    }
-    if(dir === 2) {
-      this.x --;
-    }
-    if(dir === 3) {
-      this.y ++;
-    }
-  }
 }
