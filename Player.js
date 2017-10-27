@@ -8,7 +8,8 @@ function Player(x, y, life, attack, armor, items, exp, level) {
   
   this.draw = function() {
     fill(0, 0, 0);
-    text("@", this.x, this.y);
+    textSize(20);
+    text("@", this.x * 20, this.y * 20 + 20);
   }
   
   this.move = function(dir) {
